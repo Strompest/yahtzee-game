@@ -9,7 +9,6 @@ import javax.swing.*;
  */
 public class GUIManager extends JFrame {
 
-    private
     public GUIManager(String title) {
         super(title);
     }
