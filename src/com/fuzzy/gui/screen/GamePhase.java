@@ -1,16 +1,15 @@
 package com.fuzzy.gui.screen;
 
-import com.fuzzy.screen.impl.BlankScreen;
-import com.fuzzy.screen.impl.GameScreen;
-import com.fuzzy.screen.impl.MenuScreen;
-import com.fuzzy.screen.impl.PauseScreen;
+import com.fuzzy.gui.screen.impl.BlankScreen;
+import com.fuzzy.gui.screen.impl.GameScreen;
+import com.fuzzy.gui.screen.impl.MenuScreen;
 
 /**
  * Created by 17Obradovijohn on 5/4/2016.
  */
 public enum GamePhase {
 
-    MENU(MenuScreen.class), GAME(GameScreen.class), PAUSE(PauseScreen.class), NONE(BlankScreen.class);
+    MENU(MenuScreen.class), GAME(GameScreen.class), NONE(BlankScreen.class);
 
     private Class<? extends Screen> screenClass;
 

@@ -40,6 +40,7 @@ public class GameScreenManager extends JFrame {
 
     private void removeCurrentScreen() {
         if (currentScreen != null) {
+            currentScreen.finish();
             remove(currentScreen);
             currentScreen = null;
         }

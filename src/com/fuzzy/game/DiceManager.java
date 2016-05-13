@@ -1,5 +1,8 @@
 package com.fuzzy.game;
 
+import com.fuzzy.GameSettings;
+import com.fuzzy.Yahtzee;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

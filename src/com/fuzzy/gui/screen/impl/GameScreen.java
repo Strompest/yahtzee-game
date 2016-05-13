@@ -10,21 +10,12 @@ import java.awt.event.KeyEvent;
 public class GameScreen extends Screen {
 
     @Override
-    public void start(Object... params) {
+    public void start() {
     }
 
     @Override
-    public void finish(Object... params) {
+    public void finish() {
 
     }
 
-    @Override
-    public void keyPressed(KeyEvent e) {
-        switch (e.getKeyCode()) {
-            case KeyEvent.VK_LEFT:
-            case KeyEvent.VK_RIGHT:
-            case KeyEvent.VK_UP:
-            case KeyEvent.VK_DOWN:
-        }
-    }
 }
