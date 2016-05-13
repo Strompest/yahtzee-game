@@ -1,3 +1,8 @@
+package com.fuzzy;
+
+import com.fuzzy.game.DiceManager;
+import com.fuzzy.game.DiceSelection;
+
 /**
  * Created by 17Obradovijohn on 5/12/2016.
  */

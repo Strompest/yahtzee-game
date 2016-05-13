@@ -1,7 +1,6 @@
+package com.fuzzy.game;
+
 import javax.swing.*;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 
 /**
  * Created by 17Obradovijohn on 5/12/2016.
@@ -25,9 +24,9 @@ public class DiceSelection extends JPanel {
             public int getTotal(DiceContainer container) {
                 container.sort();
                 for (Die d : container.getDice()) {
-                    int count = count(d.getCurrentRoll(), container);
-                    if (count >= 3) {
-                        return d.getCurrentRoll() * 3;
+                    int[] indexes = container.getIndexes(d.getCurrentRoll());
+                    if (indexes.length >= 3) {
+                        return container.addAll();
                     }
                 }
                 return -1;
@@ -38,9 +37,9 @@ public class DiceSelection extends JPanel {
             public int getTotal(DiceContainer container) {
                 container.sort();
                 for (Die d : container.getDice()) {
-                    int count = count(d.getCurrentRoll(), container);
-                    if (count >= 4) {
-                        return d.getCurrentRoll() * 4;
+                    int[] indexes = container.getIndexes(d.getCurrentRoll());
+                    if (indexes.length >= 4) {
+                        return container.addAll();
                     }
                 }
                 return -1;
@@ -49,31 +48,21 @@ public class DiceSelection extends JPanel {
         FULL_HOUSE {
             @Override
             public int getTotal(DiceContainer container) {
-
+                return -1;
             }
         },
         SMALL_STRAIT {
             @Override
             public int getTotal(DiceContainer container) {
-                return false;
+                return -1;
             }
         },
         LARGE_STRAIT {
             @Override
             public int getTotal(DiceContainer container) {
-                return false;
+                return -1;
             }
         };
-
-        public int count(int number, DiceContainer container) {
-            int count = 0;
-            for (Die d : container.getDice()) {
-                if (d.getCurrentRoll() == number)
-                    count++;
-            }
-            return count;
-        }
-
 
     }
 

@@ -1,8 +1,8 @@
+package com.fuzzy.game;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by 17Obradovijohn on 5/12/2016.

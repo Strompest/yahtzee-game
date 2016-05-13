@@ -1,5 +1,6 @@
+package com.fuzzy.game;
+
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -23,6 +24,34 @@ public class DiceContainer {
                 return 0;
             }
         });
+    }
+
+    public int addAll() {
+        int count = 0;
+        for (Die d : dice) {
+            count += d.getCurrentRoll();
+        }
+        return count;
+    }
+
+    public int count(int number) {
+        int count = 0;
+        for (Die d : dice) {
+            if (d.getCurrentRoll() == number)
+                count++;
+        }
+        return count;
+    }
+
+    public int[] getIndexes(int number) {
+        int[] indexes = new int[count(number)];
+        int counter = 0;
+        for (int i = 0; i < indexes.length; i++) {
+            if (get(i).getCurrentRoll() == number) {
+                indexes[counter++] = i;
+            }
+        }
+        return indexes;
     }
 
     public List<Die> getDice() {
